@@ -17,7 +17,9 @@ function main_click(){
 function movement(){
         annoying_button.style.position = 'absolute';
         move_button += 20;
-        annoying_button.style.transform = 'translateX(20) translateY(30)';
+        // The issue was we did not use backticks (`). Once we wrap the string using them, we can invoke
+        // variables in our CSS code by using ${variablename}.
+        annoying_button.style.transform = `translateX(${move_button}px) translateY(${move_button}px)`;
 }
 
 
